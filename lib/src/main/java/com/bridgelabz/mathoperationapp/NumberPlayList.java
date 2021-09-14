@@ -99,6 +99,12 @@ public class NumberPlayList {
 									.max((n1,n2)-> n1-n2)
 									.orElse(null);
 		System.out.println("Method11: maximum even number::"+maxEvenInteger);
+		
+		//
+		Integer sum = myNumberList.stream().reduce(0, Integer::sum);
+		long count = myNumberList.stream().count();
+		
+		System.out.println("Average ("+sum+"/"+count+")= "+sum/count);
 	}
 
 }
