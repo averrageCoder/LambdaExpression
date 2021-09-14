@@ -73,9 +73,10 @@ public class NumberPlayList {
 		
 		//
 		List<Double> myDoubleList = myNumberList.stream()
+									.filter(isEvenFunction)
 									.map(toDoubleFunction)
 									.collect(Collectors.toList());
-		System.out.println("Method9: transforming stream::"+myDoubleList);
+		System.out.println("Method9: transforming stream and filtering::"+myDoubleList);
 	}
 
 }
