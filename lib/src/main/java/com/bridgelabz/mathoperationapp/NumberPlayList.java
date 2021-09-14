@@ -115,6 +115,17 @@ public class NumberPlayList {
 		System.out.println("All even: "+allEven);
 		System.out.println("Any even: "+anyEven);
 		System.out.println("None even: "+noneEven);
+		
+		//
+		myNumberList.add(12);
+		myNumberList.add(-2);
+		myNumberList.add(54);
+		myNumberList.add(10);
+		List<Double> mySortedList = myNumberList.stream()
+									.sorted()
+									.map(toDoubleFunction)
+									.collect(Collectors.toList());
+		System.out.println("Method14: sorted list::"+mySortedList);
 	}
 
 }
