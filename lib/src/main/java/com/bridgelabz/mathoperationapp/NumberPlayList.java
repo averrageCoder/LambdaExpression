@@ -59,9 +59,14 @@ public class NumberPlayList {
 		});
 		
 		//
-		Predicate<Integer> isEvenFunction = n -> n%2 ==0;
+		Predicate<Integer> isEvenFunction = n -> n>0 && n%2 ==0;
 		myNumberList.forEach(n-> {
 			System.out.println("Method7: forEach value of: "+n+" check for even: "+isEvenFunction.test(n));
+		});
+		
+		//
+		myNumberList.stream().forEach(n -> {
+			System.out.println("Method8: processing of stream::"+n);
 		});
 	}
 
