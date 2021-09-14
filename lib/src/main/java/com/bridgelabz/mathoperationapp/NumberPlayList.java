@@ -85,6 +85,20 @@ public class NumberPlayList {
 									.findFirst()
 									.orElse(null);
 		System.out.println("Method10: peek first even number::"+firstEvenInteger);
+		
+		//
+		Integer minEvenInteger = myNumberList.stream()
+									.filter(isEvenFunction)
+									.min((n1,n2)-> n1-n2)
+									.orElse(null);
+		System.out.println("Method11: minimun even number::"+minEvenInteger);
+		
+		//
+		Integer maxEvenInteger = myNumberList.stream()
+									.filter(isEvenFunction)
+									.max((n1,n2)-> n1-n2)
+									.orElse(null);
+		System.out.println("Method11: maximum even number::"+maxEvenInteger);
 	}
 
 }
