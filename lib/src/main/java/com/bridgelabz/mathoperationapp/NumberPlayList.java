@@ -104,7 +104,17 @@ public class NumberPlayList {
 		Integer sum = myNumberList.stream().reduce(0, Integer::sum);
 		long count = myNumberList.stream().count();
 		
-		System.out.println("Average ("+sum+"/"+count+")= "+sum/count);
+		System.out.println("Method12: Average ("+sum+"/"+count+")::"+sum/count);
+		
+		//
+		boolean allEven = myNumberList.stream().allMatch(isEvenFunction);
+		boolean anyEven = myNumberList.stream().anyMatch(isEvenFunction);
+		boolean noneEven = myNumberList.stream().noneMatch(isEvenFunction);
+		
+		System.out.println("Method13: ");
+		System.out.println("All even: "+allEven);
+		System.out.println("Any even: "+anyEven);
+		System.out.println("None even: "+noneEven);
 	}
 
 }
